@@ -1,101 +1,104 @@
-# 產品需求文檔 (Product Requirements Document)
+Create a complete, maintainable, and optimized Next.js App Router project. The design should be unique and avoid generic AI-generated looks, with custom-designed components that reflect the brand's personality.
 
-> 💡 **給 Vibe Coder 的說明**: 這是您表達創意的空間！請在下方各個段落中描述您理想中的網頁設計。不需要懂程式碼，只要用文字描述您的想法即可。AI 會根據您的描述來實現網頁。
+## IMPORTANT: Complete Multi-Page Website Required
+**CRITICAL**: This is a 2-page website. You MUST create ALL 2 pages, not just the first one.
+**Required Pages**: "創意設計工作室", "科技部落格"
+**Navigation**: Implement a complete navigation system that links to all pages.
+**File Structure**: Create separate page files for each page (e.g., app/about/page.tsx, app/contact/page.tsx, etc.)
+**Routing**: Use Next.js App Router conventions for all pages.
 
-## 🎯 核心設計理念
+## Project Structure & Maintainability:
+- **Next.js App Router**: Use the latest App Router conventions with proper file-based routing.
+- **Multi-Page Structure**: Create individual page files for each of the 2 pages.
+- **Modular Components**: Each major section (Hero, Features, Testimonials, etc.) should be its own reusable React component file (e.g., `components/sections/HeroSection.tsx`).
+- **Shared Layout**: Implement a global layout in `app/layout.tsx` with navigation to all pages.
+- **Page Assembly**: Each page should assemble its specific sections in its respective page.tsx file.
+- **UI Components**: Create custom UI components (e.g., custom cards, buttons) in `components/ui/` if they deviate significantly from shadcn/ui defaults.
+- **Utilities**: Use `lib/utils.ts` for helper functions.
+- **Clean Code**: Ensure code is well-organized, readable, and follows best practices for a scalable project.
+- **Assets**: Place images and other static assets in the `public/` directory.
 
-<!-- 請在這裡描述您的網站的核心理念和目標受眾 -->
-<!-- 範例：我想要一個極簡風格的精品購物網站，目標客群是追求品質生活的都市白領 -->
+## Brand DNA & Custom Component Style:
+**Overall Style**: 奢華高端
+**Color Scheme**: 綠、白
+**Typography**: 專業
+**Spacing & Layout**: 寬鬆
+**Additional Requirements**: 展現出專業網站設計師的風範，設計出絕世無雙的精緻網站
 
-*請在此處填寫您的設計理念...*
+**Custom Component Design Rules (Crucial for Uniqueness)**:
+- **NO standard shadcn/ui component look**: Design custom variants for cards, buttons, inputs, etc.
+- **Containers**: Use unique shapes (e.g., floating panels, tilted boxes, layered elements), creative borders, custom shadows, and non-rectangular forms.
+- **Buttons**: Implement distinct designs (e.g., pill shapes, custom hover states, gradient borders, morphing effects).
+- **Typography**: Create a custom hierarchy with varied font weights, sizes, and line heights that reflect the brand.
+- **Spacing**: Break traditional grid patterns; use innovative whitespace and visual rhythm.
+- **Imagery**: Apply unique image treatments (e.g., custom masks, creative overlays, asymmetric crops).
+- **Asymmetry**: Embrace offset elements, varied heights, and creative alignments to avoid a generic feel.
+- **Backgrounds**: Utilize subtle patterns, gradient meshes, or geometric shapes instead of flat colors.
 
-## 🏗️ 頁面佈局與結構
+## Navigation System:
+Create a comprehensive navigation system that includes:
+- **Header Navigation**: Main navigation bar with links to all 2 pages
+- **Mobile Navigation**: Responsive mobile menu for all pages
+- **Footer Navigation**: Footer links to key pages
+- **Active States**: Highlight the current page in navigation
+- **Smooth Transitions**: Add hover and transition effects
 
-<!-- 請描述您希望的頁面佈局 -->
-<!-- 範例：頂部要有簡潔的導航欄，主體區域採用網格布局展示商品，底部要有聯絡資訊 -->
+## Page 1: 創意設計工作室
+**File**: app/創意設計工作室/page.tsx (or app/page.tsx for home)
+### Section 1: 創意導航 (navigation)
+Nav: creative menu design, custom hover states, unique mobile menu
+Background: #FFFFFF with creative treatment
 
-### 導航區域
-*請描述導航欄的設計...*
+### Section 2: 創意主視覺 (hero)
+Creative hero: asymmetric layout, custom button with gradient border, floating elements
+Title: "創意無界限"
+Subtitle: "我們用設計改變世界"
+Background: #FBBF24 with creative treatment
 
-### 主要內容區域
-*請描述主要內容的排版方式...*
+### Section 3: 作品展示 (gallery)
+Gallery: creative grid breaks, custom image masks, floating hover effects
+Title: "精選作品"
+Gallery: 3 images, creative grid layout
+Background: #F9FAFB with creative treatment
 
-### 頁尾區域
-*請描述頁尾的內容和設計...*
+### Section 4: 創意團隊 (team)
+Team cards: creative photo treatments, asymmetric info layouts, custom social icons
+Title: "創意大師們"
+Team (3): Alex Chen, Sarah Lin
+Background: #FFFFFF with creative treatment
 
-## 🛍️ 商品展示方式
+## Page 2: 科技部落格
+**File**: app/科技部落格/page.tsx (or app/page.tsx for home)
+### Section 1: 科技導航 (navigation)
+Nav: creative menu design, custom hover states, unique mobile menu
+Background: #1F2937 with creative treatment
 
-<!-- 請描述您希望如何展示商品 -->
-<!-- 範例：每個商品用卡片展示，滑鼠懸停時有輕微放大效果，顯示商品圖片、名稱和價格 -->
+### Section 2: 科技標題 (hero)
+Creative hero: asymmetric layout, custom button with gradient border, floating elements
+Title: "探索科技前沿"
+Subtitle: "最新科技趨勢、深度技術分析"
+Background: #111827 with creative treatment
 
-### 商品卡片設計
-*請描述單個商品的展示方式...*
+### Section 3: 最新文章 (blog)
+Blog: creative post cards, custom meta layouts, unique image treatments
+Title: "最新科技資訊"
+Blog: 3 posts, creative card layouts
+Background: #F9FAFB with creative treatment
 
-### 商品列表佈局
-*請描述多個商品如何排列...*
+## Final Creative & Technical Requirements:
+**Multi-Page Completion**: ENSURE ALL 2 PAGES ARE FULLY IMPLEMENTED with their respective sections and content.
+**Technical**: Use shadcn/ui components as a base, but heavily customize their appearance with Tailwind CSS to achieve the unique design. Ensure full responsiveness (mobile-first).
+**Routing**: Implement proper Next.js App Router file structure with working navigation between all pages.
+**Creative Mandate**: Every single component and section must feel hand-crafted and uniquely tailored to the brand, not like a standard template. Focus on innovative visual patterns and interactions.
+**Brand Integration**: Components should embody the brand's personality, story, and style in their design, shapes, and animations.
+**Consistency**: Maintain design consistency across all 2 pages while allowing each page to have its unique character.
+**Avoid**: Generic, off-the-shelf shadcn/ui looks, predictable layouts, and designs that scream 'AI-generated'.
+**Embrace**: Bold creative interpretation, strong brand identity expression, memorable visual moments, and storytelling through design.
 
-### 互動效果
-*請描述用戶與商品互動時的效果...*
-
-## 🎨 視覺風格與品牌
-
-<!-- 請描述您期望的視覺風格 -->
-<!-- 範例：使用柔和的粉色系，搭配圓角設計，營造溫暖友善的感覺 -->
-
-### 色彩方案
-*請描述主要顏色和輔助顏色...*
-
-### 字體選擇
-*請描述標題和正文的字體風格...*
-
-### 整體氛圍
-*請描述網站要傳達的感覺...*
-
-## ✨ 用戶互動與動畫
-
-<!-- 請描述您希望的互動效果和動畫 -->
-<!-- 範例：按鈕點擊時有漣漪效果，頁面載入時商品卡片依次淡入 -->
-
-### 按鈕和連結
-*請描述互動元素的行為...*
-
-### 過渡動畫
-*請描述頁面元素的動畫效果...*
-
-### 載入效果
-*請描述資料載入時的視覺反饋...*
-
-## 📱 響應式設計需求
-
-<!-- 請描述在不同設備上的顯示需求 -->
-<!-- 範例：手機上商品改為單列顯示，平板上顯示兩列，桌面顯示四列 -->
-
-### 手機版
-*請描述手機上的顯示方式...*
-
-### 平板版
-*請描述平板上的顯示方式...*
-
-### 桌面版
-*請描述桌面上的顯示方式...*
-
-## 🎯 特殊功能需求
-
-<!-- 如果有特殊功能需求，請在這裡描述 -->
-<!-- 範例：需要商品搜索功能、價格篩選功能、商品詳情彈窗等 -->
-
-*請列出您需要的特殊功能...*
-
-## 💬 其他補充說明
-
-<!-- 任何其他想法或參考資料都可以寫在這裡 -->
-
-*請補充其他說明...*
-
----
-
-> 📌 **提示**: 
-> - 請盡可能詳細地描述您的想法
-> - 可以提供參考網站或圖片連結
-> - 不確定的地方可以留空，AI 會使用預設設計
-> - 記得保存文件後，在 Issue 中 @claude 來啟動 AI 開發流程！
+## Delivery Checklist:
+□ All 2 pages created with proper file structure
+□ Working navigation system linking all pages
+□ Responsive design across all pages
+□ Custom-styled components (not generic shadcn/ui)
+□ Brand-consistent design across all pages
+□ Proper Next.js App Router implementation
